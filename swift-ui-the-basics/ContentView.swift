@@ -14,10 +14,12 @@ struct ContentView: View {
                            endPoint: .bottomTrailing )
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
            VStack {
-                Text("Weather")
+                Text("Cupertino CA")
                     .font(.system(size: 32, weight: .medium, design: .default))
                     .foregroundColor(.white)
-                    .frame(width: 200, height: 200)
+               VStack {
+                   Image(systemName: "cloud.sun.fill")
+               }
             }
         }
     }
