@@ -9,7 +9,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.white, Color.blue, Color.yellow]),
+            LinearGradient(gradient: Gradient(colors: [Color.white, Color.blue, Color.gray]),
                            startPoint: .topLeading,
                            endPoint: .bottomTrailing )
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
@@ -18,7 +18,7 @@ struct ContentView: View {
                     .font(.system(size: 32, weight: .medium, design: .default))
                     .foregroundColor(.white)
                     .padding()
-                VStack {
+                VStack (spacing: 8) {
                     Image(systemName: "cloud.sun.fill")
                          .renderingMode(.original)
                          .resizable()
@@ -27,6 +27,8 @@ struct ContentView: View {
                     Text("70°")
                         .font(.system(size: 70, weight: .medium, design: .default))
                         .foregroundColor(.white)
+                    Divider()
+                    //Color.red.frame(height: 1 / UIScreen.main.scale)
                 }
                 Spacer()
                
