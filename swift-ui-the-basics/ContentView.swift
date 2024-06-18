@@ -13,13 +13,23 @@ struct ContentView: View {
                            startPoint: .topLeading,
                            endPoint: .bottomTrailing )
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-           VStack {
+            VStack {
                 Text("Cupertino CA")
                     .font(.system(size: 32, weight: .medium, design: .default))
                     .foregroundColor(.white)
-               VStack {
-                   Image(systemName: "cloud.sun.fill")
-               }
+                    .padding()
+                VStack {
+                    Image(systemName: "cloud.sun.fill")
+                         .renderingMode(.original)
+                         .resizable()
+                         .aspectRatio(contentMode: .fit)
+                         .frame(width: 180, height: 180, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    Text("70°")
+                        .font(.system(size: 70, weight: .medium, design: .default))
+                        .foregroundColor(.white)
+                }
+                Spacer()
+               
             }
         }
     }
