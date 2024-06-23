@@ -9,7 +9,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.blue, Color("lightblue")]),
+            LinearGradient(gradient: Gradient(colors: [Color.blue, Color.lightblue]),
                            startPoint: .topLeading,
                            endPoint: .bottomTrailing )
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
@@ -40,9 +40,13 @@ struct ContentView: View {
                 }
                 Spacer()
                 Button {
-                    
+                    print( "Tapped" )
                 } label: {
                     Text( "Change Day Time")
+                        .frame(width: 200,height: 40)
+                        .background(Color.lightblue)
+                        .font(.system(size: 20, weight: .medium))
+                        .cornerRadius(10)
                 }
                 Spacer()
                
